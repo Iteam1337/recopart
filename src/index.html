@@ -1,0 +1,30 @@
+<!doctype html>
+<html<% if(manifest) { %> manifest="<%=manifest%>"<% } %>>
+<head>
+  <title>recopart</title>
+  <link rel="stylesheet" href="<%= css %>" />
+</head>
+<body ng-app="recopart">
+  <div ng-controller="Main as vm">
+    <ng-include src="'main/main.html'"></ng-include>
+  </div>
+
+  <% if(dependencies) { %>
+  <!-- dependencies -->
+  <% dependencies.forEach(function (file)
+  {%><script src="<%=file%>"></script>
+  <%}); %><!-- /dependencies -->
+  <% } %>
+
+  <!-- code -->
+  <% code.forEach(function (file)
+  {%><script src="<%=file%>"></script>
+  <%}); %><!-- /code -->
+  
+  <% if(livereload && livereload.port) { %>
+  <!-- livereload -->
+  <script src="//localhost:<%= livereload.port %>/livereload.js?snipver=1"></script>
+  <!-- /livereload -->
+  <%}%>
+</body>
+</html>

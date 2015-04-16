@@ -1,0 +1,25 @@
+{
+  "appName": "recopart",
+
+  "js": ["*.js", "src/**/*.js", "!node_modules/**/*.js", "!bower_components/**/*.js"],
+  "code": ["src/*.module.js", "src/**/*.module.js", "src/**/*.js"],
+  "tests": ["test/**/*.js"],
+  "mochaFile": "test.html",
+  "mochaPort": 1337,
+  "mochaLrPort": 35730,
+  "karmaPort": 9876,
+  "servePort": 3000,
+  "serveLrPort": 35729,
+  "karmaBrowsers": ["Chrome", "Firefox", "Safari", "PhantomJS"],
+
+  "distFolders":  ["www"],
+  "distFoldersLive":  ["platforms/*/www"],
+  "tmpFolder":  "src/tmp",
+  "indexFile":  "src/index.html",
+  "lessIndexFile":  ["src/index.less"],
+  "lessFiles":  ["src/**/*.less"],
+  "sassFiles":  ["src/**/*.scss"],
+  "templateFiles": ["src/**/*.html", "!src/index.html"],
+  "assetFiles": ["src/tmp/**", "!src/tmp/templates.js"],
+  "sourcemapsFolder": "maps"
+}
