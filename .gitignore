@@ -28,8 +28,8 @@ node_modules
 bower_components
 
 # Build artefacts
+src/tmp
 platforms/*/build
-platforms/*/platform_www
 platforms/*/www
-plugins/*/**
-www
+www/*
+!www/config.xml
