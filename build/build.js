@@ -73,8 +73,15 @@ function _clean(name) {
   gulp.task(name, function () {
     runningTasks.clean = true;
     var folders = (gutil.env.live) ? config.distFoldersLive : config.distFolders;
+    var src = folders
+      .map(function (folder) {
+        return folder+'/*';
+      })
+      .concat(folders.map(function (folder) {
+        return '!'+folder+'/config.xml';
+      }))
+      .concat(['src/tmp', '!plugins/**', '!cordova*.js']);
 
-    var src = folders.concat(['src/tmp', '!plugins/**', '!cordova*.js']);
     return gulp.src(src, {read: false})
       .pipe(rimraf());
   });
