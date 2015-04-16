@@ -1,7 +1,7 @@
 {
   "appName": "recopart",
 
-  "js": ["*.js", "src/**/*.js", "!node_modules/**/*.js", "!bower_components/**/*.js"],
+  "js": ["*.js", "src/**/*.js", "test/**/*.js", "!node_modules/**/*.js", "!bower_components/**/*.js"],
   "code": ["src/*.module.js", "src/**/*.module.js", "src/**/*.js"],
   "tests": ["test/**/*.js"],
   "mochaFile": "test.html",
