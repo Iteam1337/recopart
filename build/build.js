@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
   gutil = require('gulp-util'),
-  rimraf = require('gulp-rimraf'),
   concat = require('gulp-concat'),
   imagemin = require('gulp-imagemin'),
   inject = require('gulp-inject'),
@@ -13,10 +12,11 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   templatecache = require('gulp-angular-templatecache'),
   template = require('gulp-template'),
+  globby = require('globby'),
+  del = require('del'),
   path = require('path'),
   projectFiles = require('./projectFiles'),
-  serve = require('./serve'),
-  globby = require('globby');
+  serve = require('./serve');
 
 var config = require('./config.json');
 
@@ -70,7 +70,7 @@ function _build(name) {
 
 function _clean(name) {
   taskNames.clean = name;
-  gulp.task(name, function () {
+  gulp.task(name, function (cb) {
     runningTasks.clean = true;
     var folders = (gutil.env.live) ? config.distFoldersLive : config.distFolders;
     var src = folders
@@ -82,8 +82,7 @@ function _clean(name) {
       }))
       .concat(['src/tmp', '!plugins/**', '!cordova*.js']);
 
-    return gulp.src(src, {read: false})
-      .pipe(rimraf());
+    del(src, function (err) { cb(err); });
   });
 }
 
