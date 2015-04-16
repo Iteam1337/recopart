@@ -1,0 +1,7 @@
+bower_components
+node_modules
+platforms/*/build
+platforms/*/platform_www
+platforms/*/www
+plugins/*/**
+www
