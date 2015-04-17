@@ -19,10 +19,12 @@
     "it": true,
     "xit": true,
     "expect": true,
-
-    "angular": true,
     "module": true,
     "inject": true,
-    "sinon": true
+    "sinon": true,
+
+    "angular": true,
+    "moment": true,
+    "_": true
   }
 }
