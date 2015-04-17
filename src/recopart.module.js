@@ -5,14 +5,15 @@
   var rootScope;
 
   function emitReady() {
-    console.log('emitready');
     rootScope.$broadcast('deviceready');
   }
 
   document.addEventListener('deviceready', function ($rootScope) {
-    console.log('deviceready');
     deviceready = true;
-    if(rootScope) { $rootScope.deviceready = true; emitReady(); }
+    if(rootScope) {
+      $rootScope.deviceready = true;
+      emitReady();
+    }
   }, false);
 
   
@@ -34,7 +35,6 @@
   }
 
   function run($rootScope) {
-    console.log('run');
     rootScope = $rootScope;
     rootScope.deviceready = deviceready;
     if(deviceready) {

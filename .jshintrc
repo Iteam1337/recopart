@@ -1,17 +1,14 @@
 {
   "curly": true,
   "eqeqeq": true,
-  "immed": true,
   "latedef": false,
-  "newcap": true,
   "noarg": true,
-  "sub": true,
   "undef": true,
   "eqnull": true,
-  "browser": true,
-  "node": true,
   "expr": true,
   "maxcomplexity": 4,
+  "browser": true,
+  "node": true,
   "globals": {
     "describe": true,
     "xdescribe": true,
@@ -23,6 +20,9 @@
     "xit": true,
     "expect": true,
 
-    "angular": true
+    "angular": true,
+    "module": true,
+    "inject": true,
+    "sinon": true
   }
 }

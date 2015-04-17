@@ -1,4 +1,16 @@
 <div class="main">
   <h1>Hello {{vm.name}}!</h1>
   <p>Device ready: {{vm.deviceready}}</p>
+  
+  <button ng-click="vm.addNumber()">Add</button>
+
+  <h2>All</h2>
+  <ol>
+    <li ng-repeat="number in vm.allNumbers">{{number}}</li>
+  </ol>
+
+  <h2>Odd</h2>
+  <ol>
+    <li ng-repeat="number in vm.oddNumbers">{{number}}</li>
+  </ol>
 </div>
