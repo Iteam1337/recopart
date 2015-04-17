@@ -87,3 +87,4 @@ Runs a series of sub tasks to generate a build
 * **sinon-chai** bridge between sinon and chai
 * **moment** the answer to any and all questions even remotely related to time and dates - not actually used in the examples
 * **lodash** utilities for object and collection manipulation. Sort of like everything link and the kitchen sink - not actually used in the examples
+* **eventemitter2** used to turn javascript classes into event emitters. Based on the Node EventEmitter and optimised for the browser
