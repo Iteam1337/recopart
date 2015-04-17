@@ -80,11 +80,15 @@ Runs a series of sub tasks to generate a build
 * **gulp** javascript based task runner
 * **bower** package manager for browser dependencies (ie angular, moment etc)
 
-##Libaries used
+##Bower packages used
+###Dependencies
+* **moment** the answer to any and all questions even remotely related to time and dates - not actually used in the examples
+* **lodash** utilities for object and collection manipulation. Sort of like everything link and the kitchen sink - not actually used in the examples
+* **eventemitter2** used to turn javascript classes into event emitters. Based on the Node EventEmitter and optimised for the browser - not actually used in the examples
+
+###Dev dependencies (for development and testing)
+* **angular-mocks** test hooks for Angular
 * **mocha** Test runner for js tests
 * **chai** assertion library for mocha
 * **sinon** mocking framework for javascript
 * **sinon-chai** bridge between sinon and chai
-* **moment** the answer to any and all questions even remotely related to time and dates - not actually used in the examples
-* **lodash** utilities for object and collection manipulation. Sort of like everything link and the kitchen sink - not actually used in the examples
-* **eventemitter2** used to turn javascript classes into event emitters. Based on the Node EventEmitter and optimised for the browser
